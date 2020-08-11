@@ -70,7 +70,7 @@ document.querySelector(".new-quote").addEventListener("click", () => {
 
 // Grab the quote, split each character into a span tag, and display
 function getQuote() {
-    var url = "http://api.quotable.io/random"; // Shoutout to Luke Peavey for this awesome API
+    var url = "https://api.quotable.io/random"; // Shoutout to Luke Peavey for this awesome API
 
     fetch(url).then(response => response.json()).then(data => {
         quoteStr = data.content;
