@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Project Glitz</title>
+
+    <!-- FontAwesome 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/site.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="flex">
+            <div class="flex">
+                <i class="fa fa-rocket header-icon"></i>
+                <h2 class="header-text">Project Glitz</h2>
+            </div>
+
+            <div>
+                <i class="fa fa-bars"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="game">
+                <h1>Glitz-Type Test</h1>
+
+                <div class="quote-div flex">
+                    <p class="quote">
+                        <!-- Quote Here -->
+                    </p>
+                    <p class="quote-author">
+                        <!-- Author Here -->
+                    </p>
+                    <span class="timer flex">0</span>
+                </div>
+
+                <div class="textbox">
+                    <div class="overlay flex">Start Game</div>
+                    <textarea name="" id="" cols="30" rows="4" disabled></textarea>
+                </div>
+
+                <div class="game-controls flex">
+                    <div class="flex">
+                        <span class="game-info blue-green btn flex wpm-span">WPM: TBD</span>
+                        <span class="game-info blue-green btn flex mobile-timer">99</span>
+                    </div>
+
+                    <a href="#" class="game-control red btn flex">Quit</a>
+                    <a href="#" class="game-control btn flex new-quote">New Quote</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><small>Justin Acevero &copy; 2020</small></p>
+        </footer>
+    </div>
+
+    <div class="progress-div">
+        <span class="progress-bar"></span>
+        <div class="progress-rocket-div">
+            <i class="fa fa-rocket progress-rocket"></i>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./js/game.js"></script>
+</body>
+
+</html>

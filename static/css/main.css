@@ -1,0 +1,54 @@
+.quote-div {
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    max-width: 500px;
+    min-height: 200px;
+    margin: 15px auto;
+}
+.quote, .quote-author {
+    position: relative;
+    
+    margin: 0 15px;
+    text-align: left;
+}
+.quote-author {
+    text-align: right;
+}
+
+
+
+.game-controls {
+    margin: 10px auto;
+    flex-direction: column;
+}
+.game-control {
+    margin: 15px;
+}
+.game-info {
+    width: 125px !important;
+    margin: 0 5px;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .quote-div {
+        max-width: 100%;
+    }
+    .quote, .quote-author {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .game-controls {
+        flex-direction: row;
+    }
+    .game-info {
+        width: 175px !important;
+    }
+
+    .mobile-timer {
+        display: none !important;
+    }
+}

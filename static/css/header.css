@@ -1,0 +1,42 @@
+header {
+    justify-content: space-between !important;
+
+    margin: 20px;
+}
+.header-text {
+    margin: 0 15px;
+}
+
+/* Icons */
+.fa-rocket {
+    position: relative;
+    font-size: 26px;
+    filter: drop-shadow(5px 5px 10px black);
+}
+.header-icon::after {
+    content: "";
+
+    width: 20px;
+    height: 5px;
+    
+    position: absolute;
+    bottom: 1px;
+    left: -7px;
+    transform: rotate(-45deg);
+    z-index: -1;
+
+    background: linear-gradient(-130deg, var(--bg-secondary-color), transparent);
+    filter: blur(1px);
+}
+.fa-bars {
+    font-size: 26px;
+}
+
+@media screen and (min-width: 1200px) {
+    .fa-rocket {
+        font-size: 38px;
+    }
+    .fa-bars {
+        font-size: 28px;
+    }
+}

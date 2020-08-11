@@ -1,0 +1,227 @@
+/* Gugi, and Open Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Open+Sans&display=swap');
+
+@import "header.css";
+
+@import "main.css";
+
+:root {
+    --bg-linear-gradient: linear-gradient(#008FA2, #2F4858);
+
+    --bg-primary-color: #2F4858;
+    --bg-secondary-color: #00FFA3;
+    --bg-third-color: #FF5F48;
+
+    --text-primary-color: #FFFFFF;
+
+    --btn-primary-color: #00FFA3;
+    --btn-secondary-color: #FF5F48;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--bg-linear-gradient) no-repeat;
+    color: var(--text-primary-color);
+
+    position: relative;
+    min-height: 100%;
+
+    font-family: "Open Sans";
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXT */
+h1, h2 {
+    font-family: "Gugi";
+    letter-spacing: 1px;
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 22px;
+}
+p {
+    font-size: 20px;
+}
+
+/* COMPONENTS */
+.timer {
+    background: var(--bg-primary-color);
+    border-radius: 50%;
+
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(-50%, -50%);
+
+    font-size: 38px;
+    text-align: center;
+
+    opacity: 0;
+}
+
+.btn {
+    background: var(--btn-primary-color);
+    color: black;
+    border-radius: 15px;
+
+    width: 175px;
+    height: 75px;
+
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.25));
+
+    font-family: "Gugi";
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 625px;
+    height: 100%;
+
+    background: transparent;
+    color: black;
+
+    font-family: "Gugi";
+    font-size: 26px;
+
+    cursor: pointer;
+}
+
+.textbox {
+    position: relative;
+}
+textarea {
+    margin: 10px auto;
+    padding: 10px;
+
+    font-size: 32px;
+}
+
+/* COLORS */
+.blue-green {
+    background: var(--bg-primary-color);
+    color: white;
+}
+
+.green {
+    background: var(--bg-secondary-color);
+    color: black;
+}
+
+.red {
+    background: var(--bg-third-color);
+    color: black;
+}
+
+/* MISC */
+/* Progress Bar */
+.progress-div {
+    position: relative;
+    padding: 20px 0;
+}
+.progress-bar {
+    background: var(--bg-secondary-color);
+    box-shadow: 0px 0px 10px var(--bg-secondary-color);
+
+    width: 0; /* NOTE: This is the value to change in order to track progress! */
+    height: 5px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transition: width 200ms linear;
+}
+.progress-rocket-div {
+    position: absolute;
+    top: 50%;
+    left: -10%; /* NOTE: This is the value to change in order to stay aligned with the progress bar! */
+    transform: translate(-50%, -50%);
+
+    transition: left 200ms linear;
+}
+.progress-rocket {
+    color: #00B5B3;
+
+    transform: rotateZ(45deg);
+
+    font-size: 48px;
+}
+
+/* MEDIA QUERY: 679px */
+@media screen and (min-width: 679px) {
+
+    /* TEXT */
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 22px;
+    }
+
+    /* COMPONENTS */
+    textarea {
+        width: 500px;
+    }
+}
+
+/* MEDIA QUERY: 1200px */
+@media screen and (min-width: 1200px) {
+
+    /* TEXT */
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 24px;
+    }
+
+    /* COMPONENTS */
+    .timer {
+        opacity: 1;
+    }
+
+    textarea {
+        width: 50%;
+    }
+}
